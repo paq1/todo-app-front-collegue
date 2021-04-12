@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <li *ngFor="let group of taskgroups">
+            <h2>groupe {{ group.id }} : {{ group.name }} </h2>
+
+            <ul>
+                <app-task *ngFor="let task of group.tasks"
+                    [id] = "task.id"
+                    [name] = "task.name"
+                    [description] = "task.description">
+                </app-task>
+            </ul>
+        </li>
+    </ul>  
+</div>
